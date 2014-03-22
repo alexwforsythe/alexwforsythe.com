@@ -38,7 +38,7 @@ DEFAULT_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-
+    'bootstrap3',
 )
 
 LOCAL_APPS = (
@@ -73,8 +73,7 @@ WSGI_APPLICATION = 'alexwforsythe.wsgi.application'
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
-DATABASES = {}
-DATABASES['default'] =  dj_database_url.config()
+DATABASES = {'default': dj_database_url.config()}
 
 
 # Internationalization
