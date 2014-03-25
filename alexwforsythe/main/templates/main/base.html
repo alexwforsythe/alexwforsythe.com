@@ -1,21 +1,25 @@
-{% load bootstrap3 %}
+{% load staticfiles %}
+
+{#{% load bootstrap3 %}#}
 
 {# Load CSS and JavaScript #}
 
-{% bootstrap_css %}
-{% bootstrap_javascript %}
+{#{% bootstrap_css %}#}
+{#{% bootstrap_javascript %}#}
 
 {# Display django.contrib.messages as Bootstrap alerts #}
-{% bootstrap_messages %}
+{#{% bootstrap_messages %}#}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Alex Forsythe</title>
+    <meta charset="utf-8">
+    <title>Alex Forsythe</title>
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
-  {% block body %}
-  {% endblock %}
+    {% block content %}
+    {% endblock %}
 </body>
 </html>

@@ -3,4 +3,5 @@
 *.pot
 *.pyc
 *.swp
+.idea
 staticfiles
