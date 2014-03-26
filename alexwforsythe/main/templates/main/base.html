@@ -1,0 +1,28 @@
+{#{% load staticfiles %}#}
+
+{#{% load bootstrap3 %}#}
+
+{# Load CSS and JavaScript #}
+
+{#{% bootstrap_css %}#}
+{#{% bootstrap_javascript %}#}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{#{% bootstrap_messages %}#}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+{#<html lang="en">#}
+<head>
+{#    <meta charset="utf-8">#}
+    <title>Alex Forsythe</title>
+
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
+
