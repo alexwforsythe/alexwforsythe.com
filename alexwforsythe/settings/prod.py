@@ -16,5 +16,5 @@ if not DEBUG:
     AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
     AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
 
-    S3_URL = 'http://{0}.s3.amazonaws.com/static/'.format(AWS_STORAGE_BUCKET_NAME)
+    S3_URL = 'http://{0}.s3.amazonaws.com/'.format(AWS_STORAGE_BUCKET_NAME)
     STATIC_URL = S3_URL
