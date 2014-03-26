@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{#{% load staticfiles %}#}
 
 {#{% load bootstrap3 %}#}
 
@@ -11,10 +11,12 @@
 {#{% bootstrap_messages %}#}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
+{#<html lang="en">#}
 <head>
-    <meta charset="utf-8">
+{#    <meta charset="utf-8">#}
     <title>Alex Forsythe</title>
+
     {% block head %}
     {% endblock %}
 </head>
@@ -23,3 +25,4 @@
     {% endblock %}
 </body>
 </html>
+
