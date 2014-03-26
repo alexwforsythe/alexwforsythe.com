@@ -4,17 +4,32 @@
 
 /* General Blueprint Style */
 /*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);*/
+
 /*@font-face {*/
-	/*font-weight: normal;*/
-	/*font-style: normal;*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
 /*}*/
 
-/**, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }*/
-body, html { font-size: 100%; padding: 0; margin: 0;}
+/**, *:after, *:before {*/
+    /*-webkit-box-sizing: border-box;*/
+    /*-moz-box-sizing: border-box;*/
+    /*box-sizing: border-box;*/
+/*}*/
+body, html {
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
-/*.clearfix:before, .clearfix:after { content: " "; display: table; }*/
-/*.clearfix:after { clear: both; }*/
+/*.clearfix:before, .clearfix:after {*/
+    /*content: " ";*/
+    /*display: table;*/
+/*}*/
+
+/*.clearfix:after {*/
+    /*clear: both;*/
+/*}*/
 
 /*body {*/
     /*font-family: 'Lato', Calibri, Arial, sans-serif;*/
@@ -29,209 +44,191 @@ html, body,
 .container,
 .cbp-fbscroller,
 .cbp-fbscroller section {
-	height: 100%;
+    height: 100%;
 }
 
 /* The nav is fixed on the right side  and we center it by translating it 50%
 (we don't know it's height so we can't use the negative margin trick) */
 /*.cbp-fbscroller > nav {*/
-	/*position: fixed;*/
-	/*z-index: 9999;*/
-	/*right: 100px;*/
-	/*top: 50%;*/
-	/*width: 26px;*/
-	/*-webkit-transform: translateY(-50%);*/
-	/*-moz-transform: translateY(-50%);*/
-	/*-ms-transform: translateY(-50%);*/
-	/*transform: translateY(-50%);*/
+    /*position: fixed;*/
+    /*z-index: 9999;*/
+    /*right: 100px;*/
+    /*top: 50%;*/
+    /*width: 26px;*/
+    /*-webkit-transform: translateY(-50%);*/
+    /*-moz-transform: translateY(-50%);*/
+    /*-ms-transform: translateY(-50%);*/
+    /*transform: translateY(-50%);*/
 /*}*/
 
 /*.cbp-fbscroller > nav a {*/
-	/*display: block;*/
-	/*position: relative;*/
-	/*z-index: 9999;*/
-	/*color: transparent;*/
-	/*width: 26px;*/
-	/*height: 26px;*/
-	/*outline: none;*/
-	/*margin: 25px 0;*/
-	/*border-radius: 50%;*/
-	/*border: 4px solid #fff;*/
+    /*display: block;*/
+    /*position: relative;*/
+    /*z-index: 9999;*/
+    /*color: transparent;*/
+    /*width: 26px;*/
+    /*height: 26px;*/
+    /*outline: none;*/
+    /*margin: 25px 0;*/
+    /*border-radius: 50%;*/
+    /*border: 4px solid #fff;*/
 /*}*/
 
 /*.no-touch .cbp-fbscroller > nav a:hover {*/
-	/*background: rgba(255,255,255,0.6);*/
+    /*background: rgba(255, 255, 255, 0.6);*/
 /*}*/
 
 /*.cbp-fbscroller > nav a.cbp-fbcurrent {*/
-	/*background: #fff;*/
+    /*background: #fff;*/
 /*}*/
 
 /* background-attachment does the trick */
 .cbp-fbscroller section {
-	position: relative;
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-size: cover;
+    position: relative;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     /*todo*/
     z-index: -1;
 }
 
 .no-touch .cbp-fbscroller section {
-	background-attachment: fixed;
+    background-attachment: fixed;
 }
 
 #fbsection1 {
-	background-image: url(../images/1.jpg);
+    background-image: url(../images/1.jpg);
 }
 
 #fbsection2 {
-	background-image: url(../images/2.jpg);
+    background-image: url(../images/2.jpg);
 }
 
 #fbsection3 {
-	background-image: url(../images/3.jpg);
+    background-image: url(../images/3.jpg);
 }
 
 #fbsection4 {
-	background-image: url(../images/4.jpg);
+    background-image: url(../images/4.jpg);
 }
 
 #fbsection5 {
-	background-image: url(../images/5.jpg);
+    background-image: url(../images/5.jpg);
 }
-
 
 
 /* Fly-out Menu */
 
-/*body, ul, li, h1, h2, span{*/
-	/*margin:0;*/
-	/*padding:0;*/
+/*body, ul, li, h1, h2, span {*/
+    /*margin: 0;*/
+    /*padding: 0;*/
 /*}*/
 ul, li, span {
-	margin:0;
-	padding:0;
+    margin: 0;
+    padding: 0;
 }
-ul{
-	list-style:none;
+ul {
+    list-style: none;
 }
 /*body{*/
 	/*background:#292929;*/
 /*}*/
+
 .slidingMenu {
-	/*position: absolute;*/
+    /*position: absolute;*/
     position: fixed;
-	height:410px;
-	width: 410px;
-	top:40px;
-	overflow:hidden;
-	right:1px;
-	font-family: Arial, Helvetica, sans-serif;
+    height: 410px;
+    width: 410px;
+    top: 40px;
+    overflow: hidden;
+    right: 1px;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 .slidingMenu li {
-	display:block;
-	float:right;
-	clear:both;
-	position:relative;
-	overflow:hidden;
+    display: block;
+    float: right;
+    clear: both;
+    position: relative;
+    overflow: hidden;
 }
+
 .slidingMenu li.move {
-	width: 9px;
-	height: 68px;
-	right:0px;
-	padding-right:10px;
-	margin-top:2px;
-	z-index: 8;
-	position: absolute;
-	background: #2183c4;
-	background:
-		-webkit-gradient(
-			linear,
-			left top,
-			left bottom,
-			from(#0771b8),
-			to(#2183c4)
-		);
-	background:
-		-moz-linear-gradient(
-			top,
-			#0771b8,
-			#2183c4
-		);
-	-moz-border-radius: 8px 0px 0px 8px;
-	-webkit-border-top-left-radius: 8px;
-	-webkit-border-bottom-left-radius: 8px;
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
-	-moz-box-shadow:1px 1px 5px #000;
-	-webkit-box-shadow:1px 1px 5px #000;
-	box-shadow:1px 1px 5px #000;
-	}
-.slidingMenu li a {
-	font-size:66px;
-	text-transform:uppercase;
-	text-decoration: none;
-	color: #ddd;
-	outline: none;
-	text-indent:5px;
-	z-index: 10;
-	display: block;
-	float: right;
-	height: 66px;
-	line-height: 66px;
-	position: relative;
-	overflow: hidden;
-	padding-right:10px;
+    width: 9px;
+    height: 68px;
+    right: 0px;
+    padding-right: 10px;
+    margin-top: 2px;
+    z-index: 8;
+    position: absolute;
+    background: #2183c4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0771b8), to(#2183c4));
+    background: -moz-linear-gradient(top, #0771b8, #2183c4);
+    -moz-border-radius: 8px 0px 0px 8px;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -moz-box-shadow: 1px 1px 5px #000;
+    -webkit-box-shadow: 1px 1px 5px #000;
+    box-shadow: 1px 1px 5px #000;
 }
-/* Descriptions */
-/*.slidingMenuDesc{*/
-	/*margin-top:40px;*/
-	/*position:relative;*/
+
+.slidingMenu li a {
+    font-size: 66px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ddd;
+    outline: none;
+    text-indent: 5px;
+    z-index: 10;
+    display: block;
+    float: right;
+    height: 66px;
+    line-height: 66px;
+    position: relative;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+Descriptions
+.slidingMenuDesc {
+    margin-top: 40px;
+    position: relative;
+}
+
+/*.slidingMenuDesc div {*/
+    /*background: #2183c4;*/
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#0771b8), to(#2183c4));*/
+    /*background: -moz-linear-gradient(top, #0771b8, #2183c4);*/
+    /*height: 68px;*/
+    /*padding-right: 5px;*/
+    /*left: -5px;*/
+    /*width: 0px;*/
+    /*margin-top: 2px;*/
+    /*overflow: hidden;*/
+    /*position: absolute;*/
+    /*-moz-box-shadow: 1px 1px 5px #000;*/
+    /*-webkit-box-shadow: 1px 1px 5px #000;*/
+    /*box-shadow: 1px 1px 5px #000;*/
+    /*-moz-border-radius: 0px 8px 8px 0px;*/
+    /*-webkit-border-top-right-radius: 8px;*/
+    /*-webkit-border-bottom-right-radius: 8px;*/
+    /*border-top-right-radius: 8px;*/
+    /*border-bottom-right-radius: 8px;*/
 /*}*/
-/*.slidingMenuDesc div{*/
-	/*background: #2183c4;     */
-	/*background: */
-		/*-webkit-gradient(*/
-			/*linear, */
-			/*left top, */
-			/*left bottom, */
-			/*from(#0771b8), */
-			/*to(#2183c4)*/
-		/*);     */
-	/*background: */
-		/*-moz-linear-gradient(*/
-			/*top, */
-			/*#0771b8, */
-			/*#2183c4*/
-		/*);   	*/
-	/*height: 68px;*/
-	/*padding-right:5px;*/
-	/*left:-5px;*/
-	/*width:0px;*/
-	/*margin-top:2px;*/
-	/*overflow:hidden;*/
-	/*position:absolute;*/
-	/*-moz-box-shadow:1px 1px 5px #000;*/
-	/*-webkit-box-shadow:1px 1px 5px #000;*/
-	/*box-shadow:1px 1px 5px #000;*/
-	/*-moz-border-radius: 0px 8px 8px 0px;  */
-	/*-webkit-border-top-right-radius: 8px;     	*/
-	/*-webkit-border-bottom-right-radius: 8px; */
-	/*border-top-right-radius: 8px;  */
-	/*border-bottom-right-radius: 8px; */
-/*}*/
+
 /*.slidingMenuDesc div span {*/
-	/*font-size:36px;*/
-	/*color: #f0f0f0;*/
-	/*text-indent:5px;*/
-	/*z-index: 10;*/
-	/*display: block;*/
-	/*height: 66px;*/
-	/*line-height: 66px;*/
-	/*position:absolute;*/
-	/*right:10px;*/
-	/*margin-left:5px;*/
-	/*top:-3px;*/
+    /*font-size: 36px;*/
+    /*color: #f0f0f0;*/
+    /*text-indent: 5px;*/
+    /*z-index: 10;*/
+    /*display: block;*/
+    /*height: 66px;*/
+    /*line-height: 66px;*/
+    /*position: absolute;*/
+    /*right: 10px;*/
+    /*margin-left: 5px;*/
+    /*top: -3px;*/
 /*}*/

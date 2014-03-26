@@ -3,14 +3,14 @@
 
 {% block head %}
 
-{#    fixed scroll layout#}
-    <meta charset="UTF-8" />
+    {#    fixed scroll layout#}
+    <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{#    <link rel="shortcut icon" href="../favicon.ico">#}
+    {#    <link rel="shortcut icon" href="../favicon.ico">#}
     <script src="{{ STATIC_URL }}main/js/modernizr.custom.js"></script>
 
-{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>#}
+    {#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>#}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- jquery.easing by http://gsgd.co.uk/ : http://gsgd.co.uk/sandbox/jquery/easing/ -->
     <script src="{{ STATIC_URL }}main/js/jquery.easing.1.3.js"></script>
@@ -20,7 +20,7 @@
     <script src="{{ STATIC_URL }}main/js/jquery.debouncedresize.js"></script>
 
 
-{#    fly-out menu #}
+    {#    fly-out menu #}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="{{ STATIC_URL }}main/css/scrolling-layout.css" type="text/css" media="screen">
 
@@ -37,24 +37,24 @@
                 <ul id="slidingMenu" class="slidingMenu">
                     <li><a href="#fbsection1">Home</a></li>
                     <li><a href="#fbsection2">About me</a></li>
-{#                    <li><a href="{{ STATIC_URL }}main/resume.pdf">Resume</a></li>#}
+                    {#                    <li><a href="{{ STATIC_URL }}main/resume.pdf">Resume</a></li>#}
                     <li><a href="#fbsection3">Resume</a></li>
-{#                    <li><a href="mailto:alexwforsythe@gmail.com">Contact</a></li>#}
+                    {#                    <li><a href="mailto:alexwforsythe@gmail.com">Contact</a></li>#}
                     <li><a href="#fbsection4">Contact</a></li>
-{#                    <li><a href="#fbsection5">Sponsors</a></li>#}
+                    {#                    <li><a href="#fbsection5">Sponsors</a></li>#}
                 </ul>
             </nav>
             <section id="fbsection1"></section>
             <section id="fbsection2"></section>
             <section id="fbsection3"></section>
             <section id="fbsection4"></section>
-{#            <section id="fbsection5"></section>#}
+            {#            <section id="fbsection5"></section>#}
         </div>
     </div>
 
     <script src="{{ STATIC_URL }}main/js/scrolling-layout.js"></script>
     <script>
-        $(function() {
+        $(function () {
             cbpFixedScrollLayout.init();
         });
     </script>
