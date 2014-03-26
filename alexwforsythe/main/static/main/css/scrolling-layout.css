@@ -102,11 +102,11 @@ html, body,
 }
 
 #fbsection2 {
-    background: url('../images/shattered.png') repeat top left;
+    background: url('../images/stardust.png') repeat top left;
 }
 
 #fbsection3 {
-    background: url('../images/triangular.png') repeat top left;
+    background: url('../images/use_your_illusion.png') repeat top left;
 }
 
 #fbsection4 {
@@ -175,8 +175,7 @@ ul {
     font-size: 66px;
     text-transform: uppercase;
     text-decoration: none;
-    /*color: #ddd;*/
-    color: #cbcbcb;
+    color: #ddd;
     outline: none;
     text-indent: 5px;
     z-index: 10;
@@ -190,10 +189,10 @@ ul {
 }
 
 /*Descriptions*/
-.slidingMenuDesc {
-    margin-top: 40px;
-    position: relative;
-}
+/*.slidingMenuDesc {*/
+    /*margin-top: 40px;*/
+    /*position: relative;*/
+/*}*/
 
 /*.slidingMenuDesc div {*/
     /*background: #2183c4;*/
