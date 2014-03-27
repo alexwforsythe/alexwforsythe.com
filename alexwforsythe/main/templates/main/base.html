@@ -19,10 +19,14 @@
 
     {% block head %}
     {% endblock %}
+
+    {% if IS_PROD %}
+    <!-- Google Analytics -->
+        {% include 'snippets/google-analytics.html' %}
+    {% endif %}
 </head>
 <body>
     {% block content %}
     {% endblock %}
 </body>
 </html>
-

@@ -1,11 +1,4 @@
-"""
-Django settings for alexwforsythe project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.6/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.6/ref/settings/
+"""Django settings for alexwforsythe project.
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -13,20 +6,28 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
+# Set IS_PROD to True only if we are using production settings.
+if os.environ.get('DJANGO_SETTINGS_MODULE', None) == 'alexwforsythe.settings.prod':
+    IS_PROD = True
+else:
+    IS_PROD = False
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True if os.environ.get('DJANGO_DEBUG', None) == '1' else False
+
+TEMPLATE_DEBUG = DEBUG
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'my-default-secret-key')
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.herokuapp.com', 'alexwforsythe.com']
 
 
-# Application definition
+# Application definitions
 
 DEFAULT_APPS = (
     'django.contrib.admin',
@@ -48,6 +49,17 @@ LOCAL_APPS = (
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates')
+)
+
+
+# Add to the default Django template context processors
+from django.conf import global_settings
+TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
+    'alexwforsythe.main.context_processors.global_settings',
+)
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -63,14 +75,6 @@ WSGI_APPLICATION = 'alexwforsythe.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
@@ -92,11 +96,9 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 # Static asset configuration
 STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
 
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, 'static'),
