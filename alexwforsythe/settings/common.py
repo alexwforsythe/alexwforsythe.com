@@ -24,7 +24,7 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
-ALLOWED_HOSTS = ['.herokuapp.com', 'alexwforsythe.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definitions
