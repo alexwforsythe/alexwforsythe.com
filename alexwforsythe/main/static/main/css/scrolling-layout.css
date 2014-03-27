@@ -21,16 +21,6 @@ body, html {
     margin: 0;
 }
 
-/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
-/*.clearfix:before, .clearfix:after {*/
-    /*content: " ";*/
-    /*display: table;*/
-/*}*/
-
-/*.clearfix:after {*/
-    /*clear: both;*/
-/*}*/
-
 /*body {*/
     /*font-family: 'Lato', Calibri, Arial, sans-serif;*/
     /*color: #fff;*/

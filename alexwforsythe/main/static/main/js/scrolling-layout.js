@@ -75,11 +75,11 @@ var cbpFixedScrollLayout = (function () {
             /**
              * append the absolute div to the menu;
              * when we mouse out from the menu
-             * the absolute div moves to the top (like initially);
+             * the absolute div moves to the selected item;
              * when hovering the items of the menu, we move it to its position
              */
             $menu.bind('mouseleave', function () {
-                console.log('mouseleave, moving to selected: ' + config.currentLink);
+//                console.log('mouseleave, moving to selected: ' + config.currentLink);
                 moveTo($selected, 400);
             })
                 .append($moving)

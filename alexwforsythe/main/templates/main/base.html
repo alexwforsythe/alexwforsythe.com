@@ -1,32 +1,43 @@
 {#{% load staticfiles %}#}
-
 {#{% load bootstrap3 %}#}
 
-{# Load CSS and JavaScript #}
-
-{#{% bootstrap_css %}#}
-{#{% bootstrap_javascript %}#}
-
-{# Display django.contrib.messages as Bootstrap alerts #}
-{#{% bootstrap_messages %}#}
-
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-{#<html lang="en">#}
-<head>
-{#    <meta charset="utf-8">#}
-    <title>Alex Forsythe</title>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Alex Forsythe</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% block head %}
-    {% endblock %}
+{#        <link rel="shortcut icon" href="../favicon.ico">#}
+        <script src="{{ STATIC_URL }}main/js/modernizr-2.6.2.min.js"></script>
 
-    {% if IS_PROD %}
-    <!-- Google Analytics -->
+        {# Load CSS and JavaScript #}
+
+        {#{% bootstrap_css %}#}
+        {#{% bootstrap_javascript %}#}
+
+        {# Display django.contrib.messages as Bootstrap alerts #}
+        {#{% bootstrap_messages %}#}
+
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        {% block content %}
+        {% endblock %}
+
+{#        {% if IS_PROD %}#}
+        <!-- Google Analytics -->
         {% include 'snippets/google-analytics.html' %}
-    {% endif %}
-</head>
-<body>
-    {% block content %}
-    {% endblock %}
-</body>
+{#        {% endif %}#}
+    </body>
 </html>
