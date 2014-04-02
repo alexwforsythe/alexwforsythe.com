@@ -31,46 +31,11 @@ body, html {
 
 /* Set all parents to full height */
 html, body,
-.container,
+.sections-container,
 .cbp-fbscroller,
 .cbp-fbscroller section {
     height: 100%;
 }
-
-/* The nav is fixed on the right side  and we center it by translating it 50%
-(we don't know it's height so we can't use the negative margin trick) */
-/*.cbp-fbscroller > nav {*/
-    /*position: fixed;*/
-    /*z-index: 9999;*/
-    /*right: 100px;*/
-    /*top: 50%;*/
-    /*width: 26px;*/
-    /*-webkit-transform: translateY(-50%);*/
-    /*-moz-transform: translateY(-50%);*/
-    /*-ms-transform: translateY(-50%);*/
-    /*transform: translateY(-50%);*/
-/*}*/
-
-/*.cbp-fbscroller > nav a {*/
-    /*display: block;*/
-    /*position: relative;*/
-    /*z-index: 9999;*/
-    /*color: transparent;*/
-    /*width: 26px;*/
-    /*height: 26px;*/
-    /*outline: none;*/
-    /*margin: 25px 0;*/
-    /*border-radius: 50%;*/
-    /*border: 4px solid #fff;*/
-/*}*/
-
-/*.no-touch .cbp-fbscroller > nav a:hover {*/
-    /*background: rgba(255, 255, 255, 0.6);*/
-/*}*/
-
-/*.cbp-fbscroller > nav a.cbp-fbcurrent {*/
-    /*background: #fff;*/
-/*}*/
 
 /* background-attachment does the trick */
 .cbp-fbscroller section {
@@ -151,6 +116,8 @@ ul {
     background: #2183c4;
     background: -webkit-gradient(linear, left top, left bottom, from(#0771b8), to(#2183c4));
     background: -moz-linear-gradient(top, #0771b8, #2183c4);
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
     -moz-border-radius: 8px 0 0 8px;
     -webkit-border-top-left-radius: 8px;
     -webkit-border-bottom-left-radius: 8px;

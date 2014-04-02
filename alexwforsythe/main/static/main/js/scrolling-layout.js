@@ -27,7 +27,7 @@ var cbpFixedScrollLayout = (function () {
     };
 
 
-    // modified fly-out menu from codrops.com
+    // modified cufonized fly-out menu from codrops.com
     var $menu = $("#slidingMenu");
 
     /**
@@ -99,7 +99,6 @@ var cbpFixedScrollLayout = (function () {
                     //slide out the description
 //                    $('#slidingMenuDesc > div:nth-child('+ parseInt($this.index()) +')').stop(true).animate({'width':'0px'},400, 'easeOutExpo');
                 });
-            ;
         });
     });
 
