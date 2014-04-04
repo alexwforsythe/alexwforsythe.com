@@ -1,103 +1,81 @@
 /* Fixed Scroll Layout */
 
-/* From default.css */
-
-/* General Blueprint Style */
-/*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);*/
-
-/*@font-face {*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
-/*}*/
-
-/**, *:after, *:before {*/
-    /*-webkit-box-sizing: border-box;*/
-    /*-moz-box-sizing: border-box;*/
-    /*box-sizing: border-box;*/
-/*}*/
-body, html {
-    font-size: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-/*body {*/
-    /*font-family: 'Lato', Calibri, Arial, sans-serif;*/
-    /*color: #fff;*/
-/*}*/
-
-
-/* From component.css */
-
-/* Set all parents to full height */
+/* set all parents to full height */
 html, body,
-.sections-container,
-.cbp-fbscroller,
-.cbp-fbscroller section {
+.panel-container,
+.panel-container section {
     height: 100%;
 }
 
-/* background-attachment does the trick */
-.cbp-fbscroller section {
-    position: relative;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.panel-container {
+    position: absolute;
+    overflow-x: hidden;
+    /*overflow-y: scroll;*/
+    overflow-y: hidden;
+    width: 100%;
+}
 
-    /*todo*/
+/* background-attachment does the trick */
+.panel-container section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
     z-index: -1;
 }
 
-.no-touch .cbp-fbscroller section {
+.no-touch .panel-container section {
     background-attachment: fixed;
 }
 
-#fbsection1 {
+/*.panel-container section.container {*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*width: 100%;*/
+/*}*/
+
+.panel1 {
     background: url('../images/cartographer.png') repeat top left;
 }
 
-#fbsection2 {
+.panel2 {
     background: url('../images/stardust.png') repeat top left;
 }
 
-#fbsection3 {
+.panel3 {
     background: url('../images/use_your_illusion.png') repeat top left;
 }
 
-#fbsection4 {
+.panel4 {
     background: url('../images/dark_mosaic.png') repeat top left;
 }
 
 
 /* Fly-out Menu */
 
-/*body, ul, li, h1, h2, span {*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-/*}*/
-ul, li, span {
+body, ul, li {
     margin: 0;
     padding: 0;
 }
+
 ul {
     list-style: none;
 }
-/*body{*/
-	/*background:#292929;*/
-/*}*/
 
-.slidingMenu {
-    /*position: absolute;*/
+.sliding-menu {
     position: fixed;
     height: 410px;
     width: 410px;
     top: 40px;
     overflow: hidden;
-    right: 1px;
+    /*right: 15px;*/
+    right: 0;
     font-family: Arial, Helvetica, sans-serif;
+
+    /*todo: can't scroll when hovering over menu*/
+    z-index: 1;
 }
 
-.slidingMenu li {
+.sliding-menu li {
     display: block;
     float: right;
     clear: both;
@@ -105,7 +83,7 @@ ul {
     overflow: hidden;
 }
 
-.slidingMenu li.move {
+.sliding-menu li.move {
     width: 9px;
     height: 68px;
     right: 0;
@@ -128,7 +106,7 @@ ul {
     box-shadow: 1px 1px 5px #000;
 }
 
-.slidingMenu li a {
+.sliding-menu li a {
     font-size: 66px;
     text-transform: uppercase;
     text-decoration: none;
@@ -144,44 +122,3 @@ ul {
     overflow: hidden;
     padding-right: 10px;
 }
-
-/*Descriptions*/
-/*.slidingMenuDesc {*/
-    /*margin-top: 40px;*/
-    /*position: relative;*/
-/*}*/
-
-/*.slidingMenuDesc div {*/
-    /*background: #2183c4;*/
-    /*background: -webkit-gradient(linear, left top, left bottom, from(#0771b8), to(#2183c4));*/
-    /*background: -moz-linear-gradient(top, #0771b8, #2183c4);*/
-    /*height: 68px;*/
-    /*padding-right: 5px;*/
-    /*left: -5px;*/
-    /*width: 0px;*/
-    /*margin-top: 2px;*/
-    /*overflow: hidden;*/
-    /*position: absolute;*/
-    /*-moz-box-shadow: 1px 1px 5px #000;*/
-    /*-webkit-box-shadow: 1px 1px 5px #000;*/
-    /*box-shadow: 1px 1px 5px #000;*/
-    /*-moz-border-radius: 0px 8px 8px 0px;*/
-    /*-webkit-border-top-right-radius: 8px;*/
-    /*-webkit-border-bottom-right-radius: 8px;*/
-    /*border-top-right-radius: 8px;*/
-    /*border-bottom-right-radius: 8px;*/
-/*}*/
-
-/*.slidingMenuDesc div span {*/
-    /*font-size: 36px;*/
-    /*color: #f0f0f0;*/
-    /*text-indent: 5px;*/
-    /*z-index: 10;*/
-    /*display: block;*/
-    /*height: 66px;*/
-    /*line-height: 66px;*/
-    /*position: absolute;*/
-    /*right: 10px;*/
-    /*margin-left: 5px;*/
-    /*top: -3px;*/
-/*}*/
