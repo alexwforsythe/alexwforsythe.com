@@ -10,8 +10,8 @@ html, body,
 .panel-container {
     position: absolute;
     overflow-x: hidden;
-    /*overflow-y: scroll;*/
-    overflow-y: hidden;
+    overflow-y: scroll;
+    /*overflow-y: hidden;*/
     width: 100%;
 }
 
@@ -61,14 +61,23 @@ ul {
     list-style: none;
 }
 
+/* way the hell off screen */
+.scrollbar-measure {
+	width: 100px;
+	height: 100px;
+	overflow: scroll;
+	position: absolute;
+	top: -9999px;
+}
+
 .sliding-menu {
     position: fixed;
     height: 410px;
     width: 410px;
     top: 40px;
     overflow: hidden;
-    /*right: 15px;*/
-    right: 0;
+    right: 15px;
+    /*right: 0;*/
     font-family: Arial, Helvetica, sans-serif;
 
     /*todo: can't scroll when hovering over menu*/

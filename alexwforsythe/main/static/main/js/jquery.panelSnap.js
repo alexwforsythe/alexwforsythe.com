@@ -307,18 +307,21 @@ if ( typeof Object.create !== 'function' ) {
         scrollTarget = self.$snapContainer.scrollTop() + $target.position().top;
       }
 
-      self.$snapContainer.stop(true).animate({
-        scrollTop: scrollTarget
-      }, self.options.slideSpeed, function() {
+        self.$snapContainer.stop(true).animate({
+            scrollTop: scrollTarget
+        }, {
+            duration: self.options.slideSpeed,
+            easing: "easeInOutExpo",
+            complete: function () {
 
-        self.scrollOffset = scrollTarget;
-        self.isSnapping = false;
+                self.scrollOffset = scrollTarget;
+                self.isSnapping = false;
 
-        // Call callback
-        self.options.onSnapFinish.call(self, $target);
-        self.$container.trigger('panelsnap:finish', [$target]);
-
-      });
+                // Call callback
+                self.options.onSnapFinish.call(self, $target);
+                self.$container.trigger('panelsnap:finish', [$target]);
+            }
+        });
 
       self.activatePanel($target);
 
@@ -482,7 +485,8 @@ if ( typeof Object.create !== 'function' ) {
     onSnapFinish: function(){},
     onActivate: function(){},
     directionThreshold: 50,
-    slideSpeed: 200,
+//    slideSpeed: 200,
+    slideSpeed: 650,
     keyboardNavigation: {
       enabled: false,
       nextPanelKey: 40,

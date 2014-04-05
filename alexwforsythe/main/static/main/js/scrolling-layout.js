@@ -1,5 +1,22 @@
-// Modified cufonized fly-out menu from codrops.com
+// Modified cufonized menu from codrops.com
 $(function () {
+    function getScrollbarWidth() {
+        // Create the measurement node
+        var scrollDiv = document.createElement("div");
+        scrollDiv.className = "scrollbar-measure";
+        document.body.appendChild(scrollDiv);
+
+        // Get the scrollbar width
+        var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+
+        // Delete the DIV
+        document.body.removeChild(scrollDiv);
+
+        return scrollbarWidth;
+    }
+    // Set the right position of the sliding menu
+    $(".sliding-menu").css('right', getScrollbarWidth());
+
     Cufon.replace('a').CSS.ready(function () {
         var $menu = $("#sliding-menu");
 
@@ -77,7 +94,7 @@ $(function () {
                 $selected = $(".sliding-menu li:nth-child(" + $child + ")");
                 moveTo($selected, 400);
             },
-            directionThreshold: 50,
+            directionThreshold: 1,
             slideSpeed: 400,
             keyboardNavigation: {
                 enabled: true,
