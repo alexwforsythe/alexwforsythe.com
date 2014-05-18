@@ -1,5 +1,6 @@
-// Modified cufonized menu from codrops.com
+// Modified cufonized menu by Manoela Ilic : http://tympanus.net/codrops/
 $(function () {
+    // getScrollbarWidth by David Walsh : http://davidwalsh.name/detect-scrollbar-width
     function getScrollbarWidth() {
         // Create the measurement node
         var scrollDiv = document.createElement("div");

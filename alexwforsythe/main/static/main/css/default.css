@@ -33,19 +33,31 @@ video {
    Author's custom styles
    ========================================================================== */
 
-/* General Blueprint Style */
-/*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);*/
+/* Social Profiles Snippet */
+.social-profiles {
+    padding: 5px 0px 0px 10px;
+    float: none;
+    clear: none;
+    height: 33px;
+    line-height: 30px;
+    list-style: none;
+}
 
-/*@font-face {*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
-/*}*/
+.social-profiles li {
+    float: left;
+}
 
-/**, *:after, *:before {*/
-    /*-webkit-box-sizing: border-box;*/
-    /*-moz-box-sizing: border-box;*/
-    /*box-sizing: border-box;*/
-/*}*/
+.social-profiles li a {
+    display: block;
+    width: 33px;
+    height: 33px;
+    margin: 0 2px;
+    outline: none;
+    /*background: transparent url(../images/profile_icons.gif) no-repeat top left;*/
+    text-indent: -9000px;
+    position: relative;
+    overflow: hidden;
+}
 
 /* ==========================================================================
    Helper classes

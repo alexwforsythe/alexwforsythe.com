@@ -13,11 +13,12 @@ html, body,
     overflow-y: scroll;
     /*overflow-y: hidden;*/
     width: 100%;
+    /*z-index: -1;*/
 }
 
 /* background-attachment does the trick */
 .panel-container section {
-    position: relative;
+    /*position: relative;*/
     overflow: hidden;
     width: 100%;
     z-index: -1;
@@ -130,4 +131,11 @@ ul {
     position: relative;
     overflow: hidden;
     padding-right: 10px;
+}
+
+.social-container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1;
 }
